@@ -1,0 +1,9 @@
+evidence-private/
+*.evtx
+*.pcap
+*.pcapng
+*.eml
+.env
+.venv/
+__pycache__/
+*.pyc
