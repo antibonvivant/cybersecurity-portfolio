@@ -1,0 +1,18 @@
+title: Windows Failed Logon Event - Investigation Starter
+id: 6d256d92-3cf1-4c49-bbb1-bb509ef604c1
+status: experimental
+description: Selects failed logon events only. Does not aggregate failures or correlate a subsequent success. Backend conversion and validation pending.
+author: Kaique Brito (AI-assisted draft)
+date: 2026-09-30
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+falsepositives:
+  - Mistyped passwords
+  - Stale service credentials
+  - Misconfigured scheduled tasks
+level: informational
